@@ -1,6 +1,5 @@
-package com.company;
+package com.company.company;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -14,14 +13,6 @@ public class Company {
     public Company(String companyName, List<Employee> employeeList){
         this.companyName = companyName;
         this.employeeList = employeeList;
-    }
-
-    public float getAverage(){
-        float sum = 0;
-        for (int i = 0; i < this.employeeList.size(); i++) {
-            sum += this.employeeList.get(i).getAge();
-        }
-        return sum / this.employeeList.size();
     }
 
     public List<Employee> getEmployeeList() {
@@ -39,6 +30,14 @@ public class Company {
 
     public void setCompanyName(String companyName) {
         this.companyName = companyName;
+    }
+
+    public float getAverage(){
+        float sum = 0;
+        for (Employee employee: this.employeeList) {
+            sum += employee.getAge();
+        }
+        return sum / this.employeeList.size();
     }
 
 }

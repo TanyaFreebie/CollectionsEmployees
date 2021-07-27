@@ -1,4 +1,4 @@
-package com.company;
+package com.company.company;
 
 public class Employee extends Person {
     private String companyId;
